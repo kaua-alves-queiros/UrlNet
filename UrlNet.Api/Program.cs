@@ -1,4 +1,6 @@
 
+using UrlNet.Infrastructure.Data;
+
 namespace UrlNet.Api
 {
     public class Program
@@ -13,6 +15,8 @@ namespace UrlNet.Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddSqlServer<ApplicationDatabaseContext>(builder.Configuration.GetConnectionString("DatabaseConnection"));
 
             var app = builder.Build();
 
