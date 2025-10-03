@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UrlNet.Application\UrlNet.Application.csproj" />
+    <ProjectReference Include="..\UrlNet.Infrastructure\UrlNet.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
