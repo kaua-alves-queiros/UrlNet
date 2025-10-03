@@ -1,0 +1,6 @@
+@UrlNet.Api_HostAddress = http://localhost:5078
+
+GET {{UrlNet.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
