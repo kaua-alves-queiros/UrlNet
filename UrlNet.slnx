@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="UrlNet.Api/UrlNet.Api.csproj" />
+  <Project Path="UrlNet.Application/UrlNet.Application.csproj" />
 </Solution>
