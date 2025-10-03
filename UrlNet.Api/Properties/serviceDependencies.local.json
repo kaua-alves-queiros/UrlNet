@@ -8,6 +8,15 @@
       "type": "mssql.local",
       "connectionId": "ConnectionStrings:DatabaseConnection",
       "dynamicId": null
+    },
+    "redis1": {
+      "containerPorts": "6379:6379",
+      "secretStore": "LocalSecretsFile",
+      "containerName": "redis",
+      "containerImage": "redis:alpine",
+      "resourceId": null,
+      "type": "redis.container",
+      "connectionId": "CacheConnection"
     }
   }
 }

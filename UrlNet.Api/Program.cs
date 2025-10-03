@@ -17,7 +17,11 @@ namespace UrlNet.Api
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddSqlServer<ApplicationDatabaseContext>(builder.Configuration.GetConnectionString("DatabaseConnection"));
-
+            builder.Services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = builder.Configuration.GetConnectionString("CacheConnection");
+                options.InstanceName = "UrlNet_";
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
